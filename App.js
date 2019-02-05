@@ -8,7 +8,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, Image, View} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,17 +18,28 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+
+
+export default class Second extends Component{
+
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
-  }
+      let pic = {
+          uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+      };
+
+          return (
+
+        <View style={styles.container}>
+          <Text style={styles.welcome}>Welcome to Qin App!</Text>
+          <Text style={styles.instructions}>Attendance made easy!</Text>
+          <Text style={styles.instructions}>{instructions}</Text>
+            <Image source={pic} style={{width: 193, height: 110}}/>
+        </View>
+    )
+  };
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
